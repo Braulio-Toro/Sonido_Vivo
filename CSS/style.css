@@ -1,0 +1,1232 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #f2f7f4; /* Gris verdoso muy claro para un fondo suave */
+  color: #121f17;           /* Verde casi negro de alto contraste para lectura */
+  line-height: 1.6;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease-in-out;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilidades */
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #137547; /* Verde medio visible */
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   2. FRANJA AVISO Y ENCABEZADO
+   ========================================================================== */
+.franja-aviso {
+  background-color: #0a2f1d; /* Verde bosque muy oscuro */
+  color: #ffffff;           /* Texto blanco puro para máximo contraste */
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-family: 'Space Mono', monospace;
+  border-bottom: 2px solid #00ff87; /* Detalle verde lima */
+}
+
+.encabezado {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.encabezado__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Logo */
+.logo__texto {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0a2f1d;
+  line-height: 1.1;
+}
+
+.logo__texto small {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #3a4d43;
+}
+
+/* Navegación */
+.nav-principal ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-principal a {
+  font-weight: 500;
+  color: #121f17;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-principal a:hover,
+.nav-principal a.activo {
+  color: #137547;
+}
+
+.nav-principal a.activo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #137547;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #0a2f1d;
+}
+
+/* Acciones (Login / Carrito) */
+.encabezado__acciones {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.enlaces-cuenta a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3a4d43;
+  margin-left: 0.8rem;
+}
+
+.enlaces-cuenta a:hover {
+  color: #137547;
+}
+
+.carrito {
+  background-color: #0a2f1d;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carrito:hover {
+  background-color: #137547;
+}
+
+/* ==========================================================================
+   3. BOTONES
+   ========================================================================== */
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.boton--principal {
+  background-color: #137547;
+  color: #ffffff;
+  border-color: #137547;
+}
+
+.boton--principal:hover {
+  background-color: #0a2f1d;
+  border-color: #0a2f1d;
+  color: #ffffff;
+}
+
+.boton--secundario {
+  background-color: transparent;
+  color: #0a2f1d;
+  border-color: #0a2f1d;
+}
+
+.boton--secundario:hover {
+  background-color: #0a2f1d;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #e2ede6 100%);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero__titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  color: #0a2f1d;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.hero__titulo em {
+  font-style: italic;
+  color: #137547;
+}
+
+.hero__texto {
+  color: #3a4d43;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero__acciones {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero__cifras {
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid #c8d6ce;
+  padding-top: 1.5rem;
+}
+
+.cifra strong {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+  color: #137547;
+}
+
+.cifra span {
+  font-size: 0.85rem;
+  color: #3a4d43;
+}
+
+.hero__imagen {
+  position: relative;
+}
+
+.hero__imagen img {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+  object-fit: cover;
+}
+
+.hero__etiqueta {
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  background-color: #0a2f1d;
+  color: #00ff87;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Animación de Ecualizador */
+.ecualizador {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  height: 30px;
+  margin: 2rem auto;
+}
+
+.ecualizador span {
+  width: 6px;
+  height: 100%;
+  background-color: #137547;
+  border-radius: 3px;
+  animation: ecualizar 1.2s infinite ease-in-out alternate;
+}
+
+.ecualizador span:nth-child(2) { animation-delay: 0.2s; }
+.ecualizador span:nth-child(3) { animation-delay: 0.4s; }
+.ecualizador span:nth-child(4) { animation-delay: 0.1s; }
+.ecualizador span:nth-child(5) { animation-delay: 0.5s; }
+.ecualizador span:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes ecualizar {
+  0% { height: 15%; }
+  100% { height: 100%; }
+}
+
+/* ==========================================================================
+   5. SECCIONES GENERALES Y CABECERA
+   ========================================================================== */
+.seccion {
+  padding: 4rem 0;
+}
+
+.seccion__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.seccion__cabecera h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  color: #0a2f1d;
+}
+
+.seccion__enlace {
+  color: #137547;
+  font-weight: 600;
+}
+
+.seccion__enlace:hover {
+  color: #0a2f1d;
+}
+
+/* Video Section */
+.video-tienda__marco video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+}
+
+.video-tienda__nota {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #3a4d43;
+  text-align: center;
+}
+
+/* ==========================================================================
+   6. GRILLA DE PRODUCTOS
+   ========================================================================== */
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #c8d6ce;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+}
+
+.tarjeta-producto__imagen img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-producto__cuerpo {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-producto__categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #3a4d43;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.tarjeta-producto__nombre {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0a2f1d;
+}
+
+.tarjeta-producto__nombre a {
+  color: #0a2f1d;
+}
+
+.tarjeta-producto__nombre a:hover {
+  color: #137547;
+}
+
+.tarjeta-producto__precio {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarjeta-producto__precio strong {
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  color: #137547;
+}
+
+.tarjeta-producto__boton {
+  background-color: #0a2f1d;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.tarjeta-producto__boton:hover {
+  background-color: #137547;
+}
+
+/* ==========================================================================
+   7. CATEGORÍAS
+   ========================================================================== */
+.categorias {
+  background-color: #0a2f1d;
+  color: #ffffff;
+}
+
+.categorias .seccion__cabecera h2 {
+  color: #ffffff;
+}
+
+.grilla-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.categoria {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.25s ease-in-out;
+}
+
+.categoria:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #00ff87;
+}
+
+.categoria__numero {
+  font-family: 'Space Mono', monospace;
+  color: #00ff87;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.categoria h3 {
+  font-family: 'Fraunces', serif;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.categoria p {
+  color: #e2ede6;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   8. NOSOTROS, TESTIMONIOS Y CTA
+   ========================================================================== */
+.nosotros__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nosotros__lista {
+  margin-top: 1rem;
+}
+
+.nosotros__lista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #3a4d43;
+}
+
+.nosotros__lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #137547;
+  font-weight: bold;
+}
+
+/* Testimonio */
+.confianza {
+  background-color: #d8e6dd; /* Verde grisáceo más saturado para mejor contraste */
+  text-align: center;
+  border-radius: 10px;
+  padding: 3rem 1.5rem;
+  margin: 2rem auto;
+}
+
+.confianza blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  color: #121f17; /* Texto oscuro visible */
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+.confianza cite {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: #3a4d43;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* CTA Final */
+.cta-final {
+  background: linear-gradient(135deg, #137547, #0a2f1d);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cta-final h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+}
+
+.cta-final .boton--secundario {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.cta-final .boton--secundario:hover {
+  background-color: #ffffff;
+  color: #0a2f1d;
+}
+
+/* ==========================================================================
+   9. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.pie {
+  background-color: #0a2f1d;
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+.pie__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.pie__marca {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+.pie p {
+  color: #e2ede6;
+  font-size: 0.9rem;
+}
+
+.pie h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #00ff87;
+}
+
+.pie ul li {
+  margin-bottom: 0.6rem;
+}
+
+.pie ul a {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.pie ul a:hover {
+  color: #00ff87;
+}
+
+.pie__form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pie__form input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 100%;
+}
+
+.pie__form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pie__form button {
+  background-color: #00ff87;
+  color: #0a2f1d;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.pie__form button:hover {
+  background-color: #ffffff;
+}
+
+.pie__inferior {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #c8d6ce;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (PANTALLAS PEQUEÑAS)
+   ========================================================================== */
+@media (max-width: 868px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-principal {
+    display: none;
+  }
+
+  .hero__grid, 
+  .nosotros__grid,
+  .pie__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__titulo {
+    font-size: 2.2rem;
+  }
+
+  .seccion__cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pie__inferior {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   11. PÁGINA DE LOGIN Y REGISTRO (DISEÑO Y CENTRADO)
+   ========================================================================== */
+.login-contenedor {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.tarjeta-login {
+  background-color: #ffffff;
+  border: 1px solid #c8d6ce;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.tarjeta-login__encabezado {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-login__titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: #0a2f1d;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-login__subtitulo {
+  font-size: 0.9rem;
+  color: #3a4d43;
+}
+
+.formulario-grupo {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-grupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a2f1d;
+  margin-bottom: 0.4rem;
+}
+
+.formulario-grupo input {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #c8d6ce;
+  border-radius: 6px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #121f17;
+  background-color: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+
+.formulario-grupo input:focus {
+  outline: none;
+  border-color: #137547;
+  box-shadow: 0 0 0 3px rgba(19, 117, 71, 0.15);
+}
+
+.tarjeta-login .boton--principal {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.tarjeta-login__registro {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #c8d6ce;
+  font-size: 0.9rem;
+  color: #3a4d43;
+}
+
+.tarjeta-login__registro a {
+  color: #137547;
+  font-weight: 600;
+}
+
+.tarjeta-login__registro a:hover {
+  text-decoration: underline;
+  color: #0a2f1d;
+}
+
+/*css registro usuario*/
+.tarjeta-registro {
+  max-width: 480px; /* Un poco más ancho para albergar los campos cómodamente */
+}
+
+.formulario-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.boton-registro {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Selector para el campo de fecha de nacimiento */
+.formulario-grupo input[type="date"] {
+  font-family: 'Work Sans', sans-serif;
+  color: #121f17;
+}
+
+/* ==========================================================================
+   12. PÁGINA DE PRODUCTOS (CATÁLOGO COMPLETO)
+   ========================================================================== */
+
+/* El h1 de productos.html debe verse igual que el h2 de las demás secciones */
+.seccion__cabecera h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  color: #0a2f1d;
+}
+
+/* Contador de resultados u opciones de orden, si se agregan más adelante */
+.productos__conteo {
+  font-size: 0.9rem;
+  color: #3a4d43;
+}
+
+/* Responsive: en pantallas pequeñas el h1 se ajusta igual que el h2 */
+@media (max-width: 868px) {
+  .seccion__cabecera h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   14. CARRITO DE COMPRAS
+   ========================================================================== */
+
+.carrito-compras__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Lista de productos */
+.carrito-compras__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item-carrito {
+  display: grid;
+  grid-template-columns: 90px 1fr auto auto auto;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #c8d6ce;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.item-carrito__imagen {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-carrito__nombre {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a2f1d;
+  margin-bottom: 0.3rem;
+}
+
+.item-carrito__descripcion {
+  font-size: 0.85rem;
+  color: #3a4d43;
+  margin-bottom: 0.5rem;
+}
+
+.item-carrito__eliminar {
+  background: none;
+  border: none;
+  color: #b3261e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.item-carrito__eliminar:hover {
+  text-decoration: underline;
+}
+
+.item-carrito__precio-unitario {
+  font-family: 'Space Mono', monospace;
+  color: #3a4d43;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.item-carrito__subtotal {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: #137547;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+/* Resumen de compra (aside) */
+.carrito-compras__resumen {
+  background-color: #ffffff;
+  border: 1px solid #c8d6ce;
+  border-radius: 10px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 100px;
+}
+
+.carrito-compras__resumen-titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  color: #0a2f1d;
+  margin-bottom: 1.2rem;
+}
+
+.carrito-compras__linea {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #3a4d43;
+  margin-bottom: 0.8rem;
+}
+
+.carrito-compras__cupon {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.2rem 0;
+}
+
+.carrito-compras__cupon input {
+  flex-grow: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #c8d6ce;
+  border-radius: 6px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+}
+
+.carrito-compras__cupon input:focus {
+  outline: none;
+  border-color: #137547;
+  box-shadow: 0 0 0 3px rgba(19, 117, 71, 0.15);
+}
+
+.carrito-compras__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #c8d6ce;
+  padding-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0a2f1d;
+}
+
+.carrito-compras__total strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+  color: #137547;
+}
+
+.carrito-compras__boton-pagar {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.carrito-compras__seguir {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #137547;
+  font-weight: 600;
+}
+
+.carrito-compras__seguir:hover {
+  color: #0a2f1d;
+  text-decoration: underline;
+}
+
+/* Carrito vacío */
+.carrito-vacio {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.carrito-vacio p {
+  color: #3a4d43;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 868px) {
+  .carrito-compras__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item-carrito {
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "imagen info"
+      "precio precio"
+      "cantidad cantidad"
+      "subtotal subtotal";
+    row-gap: 0.8rem;
+  }
+
+  .item-carrito__imagen { grid-area: imagen; width: 70px; height: 70px; }
+  .item-carrito__info { grid-area: info; }
+  .item-carrito__precio-unitario { grid-area: precio; }
+  .item-carrito .selector-cantidad { grid-area: cantidad; }
+  .item-carrito__subtotal { grid-area: subtotal; }
+
+  .carrito-compras__resumen {
+    position: static;
+  }
+}
+
+/* ==========================================================================
+   15. NOSOTROS (EQUIPO)
+   ========================================================================== */
+.grilla-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.miembro-equipo {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.miembro-equipo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.miembro-equipo__cuerpo {
+  padding: 1.2rem;
+}
+
+.miembro-equipo__nombre {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.miembro-equipo__cargo {
+  font-size: 0.85rem;
+  color: #00ff87;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   16. BLOGS
+   ========================================================================== */
+.grilla-blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-blog {
+  background-color: #ffffff;
+  border: 1px solid #c8d6ce;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease-in-out;
+}
+
+.tarjeta-blog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+}
+
+.tarjeta-blog__imagen img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tarjeta-blog__cuerpo {
+  padding: 1.5rem;
+}
+
+.tarjeta-blog__titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem;
+  color: #0a2f1d;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-blog__titulo a {
+  color: #0a2f1d;
+}
+
+.tarjeta-blog__titulo a:hover {
+  color: #137547;
+}
+
+.tarjeta-blog__resumen {
+  color: #3a4d43;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.tarjeta-blog__boton {
+  display: inline-block;
+  color: #137547;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tarjeta-blog__boton:hover {
+  color: #0a2f1d;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   17. DETALLE DE BLOG
+   ========================================================================== */
+.detalle-blog__contenido {
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+}
+
+.detalle-blog__titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  color: #0a2f1d;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.detalle-blog__fecha {
+  font-size: 0.85rem;
+  color: #3a4d43;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 1.5rem;
+}
+
+.detalle-blog__imagen {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(10, 47, 29, 0.12);
+  margin-bottom: 2rem;
+}
+
+.detalle-blog__texto p {
+  color: #3a4d43;
+  margin-bottom: 1.2rem;
+}
+
+.detalle-blog__cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 868px) {
+  .detalle-blog__titulo {
+    font-size: 1.6rem;
+  }
+}
+
+/* ==========================================================================
+   18. TEXTAREA (FORMULARIO DE CONTACTO)
+   ========================================================================== */
+.formulario-textarea {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #c8d6ce;
+  border-radius: 6px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #121f17;
+  background-color: #ffffff;
+  resize: vertical;
+  transition: all 0.25s ease-in-out;
+}
+
+.formulario-textarea:focus {
+  outline: none;
+  border-color: #137547;
+  box-shadow: 0 0 0 3px rgba(19, 117, 71, 0.15);
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi carrito de compras | Sonido Vivo</title>
+    <meta name="description" content="Revisa los productos en tu carrito de compras en Sonido Vivo." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../CSS/style.css"/>
+</head>
+
+<body>
+
+  <p class="franja-aviso">Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a nuestros clientes</p>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="encabezado">
+    <div class="encabezado__barra contenedor">
+      <a href="index.html" class="logo" aria-label="Sonido Vivo, ir al inicio">
+        <span class="logo__texto">
+          Sonido Vivo
+          <small>Instrumentos &amp; equipos musicales</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal">
+        ☰ <span class="visually-hidden">Abrir menú</span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="encabezado__acciones">
+        <div class="enlaces-cuenta" id="enlaces-cuenta">
+          <a href="login.html">Iniciar sesión</a>
+          <a href="formularioinscripcion.html">Registrar usuario</a>
+        </div>
+        <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+          <span class="carrito__icono" aria-hidden="true">🛒</span>
+          <span>Cart (<span id="contadorCarrito">3</span>)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="seccion carrito-compras" aria-labelledby="carrito-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <div>
+            <p class="eyebrow">Revisa antes de pagar</p>
+            <h1 id="carrito-titulo">Mi carrito de compras</h1>
+          </div>
+        </div>
+
+        <div class="carrito-compras__grid" id="carritoGrid">
+
+          <!-- ============ LISTA DE PRODUCTOS ============ -->
+          <div class="carrito-compras__lista" id="listaCarrito">
+
+            <article class="item-carrito" data-precio="249990">
+              <img src="https://picsum.photos/seed/guitarra-electrica/150/150" alt="Guitarra eléctrica Sunburst" class="item-carrito__imagen" />
+
+              <div class="item-carrito__info">
+                <h3 class="item-carrito__nombre">Guitarra eléctrica Sunburst</h3>
+                <p class="item-carrito__descripcion">Cuerpo sólido, acabado sunburst, mástil de arce.</p>
+                <button type="button" class="item-carrito__eliminar" aria-label="Eliminar producto del carrito">Eliminar</button>
+              </div>
+
+              <div class="item-carrito__precio-unitario">$249.990</div>
+
+              <div class="selector-cantidad">
+                <button type="button" class="selector-cantidad__boton restar-cantidad" aria-label="Restar una unidad">−</button>
+                <input type="number" class="cantidad-item" value="1" min="1" max="10" readonly>
+                <button type="button" class="selector-cantidad__boton sumar-cantidad" aria-label="Sumar una unidad">+</button>
+              </div>
+
+              <div class="item-carrito__subtotal">$249.990</div>
+            </article>
+
+            <article class="item-carrito" data-precio="49990">
+              <img src="https://picsum.photos/seed/microfono-dinamico/150/150" alt="Micrófono dinámico vocal" class="item-carrito__imagen" />
+
+              <div class="item-carrito__info">
+                <h3 class="item-carrito__nombre">Micrófono dinámico vocal</h3>
+                <p class="item-carrito__descripcion">Ideal para presentaciones en vivo.</p>
+                <button type="button" class="item-carrito__eliminar" aria-label="Eliminar producto del carrito">Eliminar</button>
+              </div>
+
+              <div class="item-carrito__precio-unitario">$49.990</div>
+
+              <div class="selector-cantidad">
+                <button type="button" class="selector-cantidad__boton restar-cantidad" aria-label="Restar una unidad">−</button>
+                <input type="number" class="cantidad-item" value="1" min="1" max="10" readonly>
+                <button type="button" class="selector-cantidad__boton sumar-cantidad" aria-label="Sumar una unidad">+</button>
+              </div>
+
+              <div class="item-carrito__subtotal">$49.990</div>
+            </article>
+
+            <article class="item-carrito" data-precio="34990">
+              <img src="https://picsum.photos/seed/pedal-efectos/150/150" alt="Pedal de distorsión" class="item-carrito__imagen" />
+
+              <div class="item-carrito__info">
+                <h3 class="item-carrito__nombre">Pedal de distorsión</h3>
+                <p class="item-carrito__descripcion">Efecto clásico de distorsión para guitarra eléctrica.</p>
+                <button type="button" class="item-carrito__eliminar" aria-label="Eliminar producto del carrito">Eliminar</button>
+              </div>
+
+              <div class="item-carrito__precio-unitario">$34.990</div>
+
+              <div class="selector-cantidad">
+                <button type="button" class="selector-cantidad__boton restar-cantidad" aria-label="Restar una unidad">−</button>
+                <input type="number" class="cantidad-item" value="1" min="1" max="10" readonly>
+                <button type="button" class="selector-cantidad__boton sumar-cantidad" aria-label="Sumar una unidad">+</button>
+              </div>
+
+              <div class="item-carrito__subtotal">$34.990</div>
+            </article>
+
+          </div>
+
+          <!-- ============ RESUMEN DE COMPRA ============ -->
+          <aside class="carrito-compras__resumen">
+            <h2 class="carrito-compras__resumen-titulo">Resumen del pedido</h2>
+
+            <div class="carrito-compras__linea">
+              <span>Subtotal</span>
+              <span id="subtotalCarrito">$334.970</span>
+            </div>
+
+            <div class="carrito-compras__linea">
+              <span>Envío</span>
+              <span>Calculado al pagar</span>
+            </div>
+
+            <div class="carrito-compras__cupon">
+              <label for="cupon" class="visually-hidden">Cupón de descuento</label>
+              <input type="text" id="cupon" placeholder="Ingresa el cupón de descuento">
+              <button type="button" class="boton boton--secundario" id="aplicarCupon">Aplicar</button>
+            </div>
+
+            <div class="carrito-compras__total">
+              <span>Total</span>
+              <strong id="totalCarrito">$334.970</strong>
+            </div>
+
+            <button type="button" class="boton boton--principal carrito-compras__boton-pagar">Pagar</button>
+
+            <a href="productos.html" class="carrito-compras__seguir">← Seguir comprando</a>
+          </aside>
+
+        </div>
+
+        <!-- ============ CARRITO VACÍO (oculto por defecto) ============ -->
+        <div class="carrito-vacio visually-hidden" id="carritoVacio">
+          <p>Tu carrito está vacío.</p>
+          <a href="productos.html" class="boton boton--principal">Ver productos</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="pie__marca">Sonido Vivo</p>
+        <p>Tienda de instrumentos y equipos musicales en Viña del Mar, Región de Valparaíso.</p>
+      </div>
+
+      <div>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Mi cuenta</h3>
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="formularioinscripcion.html">Registrar usuario</a></li>
+          <li><a href="carrito.html">Carrito de compras</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Novedades</h3>
+        <p>Recibe nuestras ofertas y casos curiosos del blog.</p>
+        <form class="pie__form" action="#" method="post">
+          <label for="correo-newsletter" class="visually-hidden">Correo electrónico</label>
+          <input type="email" id="correo-newsletter" name="correo-newsletter" placeholder="tu@correo.com" />
+          <button type="submit">Suscribir</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contenedor pie__inferior">
+      <span>© 2026 Sonido Vivo. Todos los derechos reservados.</span>
+      <span>Viña del Mar, Región de Valparaíso, Chile</span>
+    </div>
+  </footer>
+
+  <script src="js/validaform.js"></script>
+</body>
+</html>

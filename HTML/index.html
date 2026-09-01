@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonido Vivo | Tienda de Instrumentos y Equipos Musicales</title>
+    <meta
+      name="description"
+      content="Sonido Vivo: guitarras, bajos, baterías, teclados, amplificadores, micrófonos y pedales de efectos en Viña del Mar. Compra en tienda o en línea."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+
+  <body>
+    <p class="franja-aviso">
+      Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a
+      nuestros clientes
+    </p>
+
+    <!-- ============ ENCABEZADO ============ -->
+    <header class="encabezado">
+      <div class="encabezado__barra contenedor">
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="Sonido Vivo, ir al inicio"
+        >
+          <span class="logo__marca" aria-hidden="true"></span>
+          <span class="logo__texto">
+            Sonido Vivo
+            <small>Instrumentos &amp; equipos musicales</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="botonMenu"
+          aria-expanded="false"
+          aria-controls="navPrincipal"
+        >
+          ☰ <span class="visually-hidden">Abrir menú</span>
+        </button>
+
+        <nav
+          class="nav-principal"
+          id="navPrincipal"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li>
+              <a href="index.html" class="activo" aria-current="page">Home</a>
+            </li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="encabezado__acciones">
+          <div class="enlaces-cuenta" id="enlaces-cuenta">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="formularioinscripcion.html">Registrar usuario</a>
+          </div>
+          <a
+            href="carrito.html"
+            class="carrito"
+            aria-label="Ver carrito de compras"
+          >
+            <span class="carrito__icono" aria-hidden="true">🛒</span>
+            <span>Cart (<span id="contadorCarrito">0</span>)</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="contenedor hero__grid">
+          <div class="hero__contenido">
+            <p class="eyebrow">Viña del Mar · Desde hace 11 años</p>
+            <h1 id="hero-titulo" class="hero__titulo">
+              El sonido correcto para <em>cada escenario</em>
+            </h1>
+            <p class="hero__texto">
+              En Sonido Vivo encuentras guitarras, bajos, baterías, teclados,
+              amplificadores, micrófonos y pedales de efectos, además de
+              servicio de reparación de instrumentos de cuerda. Más de 340
+              referencias disponibles, atendidas por músicos que saben de qué
+              hablan.
+            </p>
+            <div class="hero__acciones">
+              <a href="productos.html" class="boton boton--principal"
+                >Ver productos</a
+              >
+              <a href="nosotros.html" class="boton boton--secundario"
+                >Conoce la tienda</a
+              >
+            </div>
+
+            <div class="hero__cifras">
+              <div class="cifra">
+                <strong>340+</strong>
+                <span>Referencias en catálogo</span>
+              </div>
+              <div class="cifra">
+                <strong>11</strong>
+                <span>Años de trayectoria</span>
+              </div>
+              <div class="cifra">
+                <strong>100%</strong>
+                <span>Reparación de cuerdas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__imagen">
+            <img
+              src="../IMG/logo1.jpg"
+              alt="Guitarra eléctrica apoyada junto a un amplificador de válvulas en la tienda Sonido Vivo"
+            />
+            <span class="hero__etiqueta">Vitrina de la semana</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="contenedor">
+        <div class="ecualizador" role="presentation" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- ============ VIDEO ============ -->
+      <section class="seccion video-tienda" aria-labelledby="video-titulo">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <p class="eyebrow">Conoce la tienda</p>
+              <h2 id="video-titulo">Un recorrido por Sonido Vivo</h2>
+            </div>
+          </div>
+
+          <div class="video-tienda__marco">
+            <!-- IMPORTANTE: reemplazar por el video propio de la tienda -->
+            <video
+              controls
+              preload="metadata"
+              poster="https://picsum.photos/seed/sonidovivo-video/1200/675"
+            >
+              <source src="video/tienda-sonido-vivo.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video. Puedes
+              <a href="video/tienda-sonido-vivo.mp4">descargar el video aquí</a
+              >.
+            </video>
+          </div>
+          <p class="video-tienda__nota">
+            *Video de presentación — agrega el archivo en
+            /video/tienda-sonido-vivo.mp4
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ PRODUCTOS DESTACADOS ============ -->
+      <section class="seccion" aria-labelledby="productos-titulo">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <p class="eyebrow">Recién llegados</p>
+              <h2 id="productos-titulo">Productos destacados</h2>
+            </div>
+            <a href="productos.html" class="seccion__enlace"
+              >Ver catálogo completo →</a
+            >
+          </div>
+
+          <div class="grilla-productos">
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Guitarra.png"
+                  alt="Guitarra Fender Stratocaster Sunburst"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Guitarras</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Fender Stratocaster Sunburst</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$899.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Bajo.png"
+                  alt="Bajo eléctrico de 4 cuerdas color negro"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Bajos</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html"
+                    >Fender Precision Bass® Deluxe Duff McKagan</a
+                  >
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$1.999.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Bateria.png"
+                  alt="Batería acústica completa de 5 piezas"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Baterías</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Batería acústica 5 piezas</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$489.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Ampli.png"
+                  alt="Amplificador de válvulas para guitarra"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Amplificadores</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Amplificador Vox</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$189.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Teclado.png"
+                  alt="Teclado digital de 61 teclas"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Teclados</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Teclado digital 61 teclas</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$159.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Micro.png"
+                  alt="Micrófono dinámico para vocales en vivo"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Micrófonos</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Micrófono dinámico vocal</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$49.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img
+                  src="../IMG/Pedal.png"
+                  alt="Pedal de efectos de distorsión para guitarra"
+                />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria"
+                  >Pedales de efectos</span
+                >
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Pedal de distorsión ZOOM G6</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$34.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tarjeta-producto">
+              <a href="producto.html" class="tarjeta-producto__imagen">
+                <img src="../IMG/Cuerdas.png" alt="Set de cuerdas" />
+              </a>
+              <div class="tarjeta-producto__cuerpo">
+                <span class="tarjeta-producto__categoria">Accesorios</span>
+                <h3 class="tarjeta-producto__nombre">
+                  <a href="producto.html">Cuerdas D'dario Guitarra</a>
+                </h3>
+                <div class="tarjeta-producto__precio">
+                  <strong>$12.990</strong>
+                  <button class="tarjeta-producto__boton" type="button">
+                    Añadir
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CATEGORÍAS ============ -->
+      <section class="seccion categorias" aria-labelledby="categorias-titulo">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <p class="eyebrow">Explora por familia</p>
+              <h2 id="categorias-titulo">Categorías</h2>
+            </div>
+          </div>
+
+          <div class="grilla-categorias">
+            <div class="categoria">
+              <span class="categoria__numero">01</span>
+              <h3>Cuerdas</h3>
+              <p>
+                Guitarras, bajos y accesorios para instrumentistas de cuerda.
+              </p>
+            </div>
+            <div class="categoria">
+              <span class="categoria__numero">02</span>
+              <h3>Percusión</h3>
+              <p>Baterías acústicas, electrónicas y accesorios de batería.</p>
+            </div>
+            <div class="categoria">
+              <span class="categoria__numero">03</span>
+              <h3>Amplificación</h3>
+              <p>Amplificadores de válvulas y transistores para todo estilo.</p>
+            </div>
+            <div class="categoria">
+              <span class="categoria__numero">04</span>
+              <h3>Audio en vivo</h3>
+              <p>Micrófonos, pedales de efectos y equipos de sonido.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NOSOTROS (resumen) ============ -->
+      <section class="seccion" aria-labelledby="nosotros-titulo">
+        <div class="contenedor nosotros__grid">
+          <div>
+            <p class="eyebrow">Nuestra historia</p>
+            <h2 id="nosotros-titulo">
+              Once años afinando a la escena musical de Valparaíso
+            </h2>
+            <p>
+              Sonido Vivo nació en Viña del Mar como un mesón atendido por su
+              dueño y hoy suma dos vendedores que conocen cada instrumento del
+              catálogo. Reparamos instrumentos de cuerda y ayudamos a músicos de
+              todo Chile a encontrar su sonido, ya sea de forma presencial o en
+              línea.
+            </p>
+            <ul class="nosotros__lista">
+              <li>Atención especializada por músicos, para músicos.</li>
+              <li>Servicio de reparación de instrumentos de cuerda.</li>
+              <li>Despacho a regiones vía Starken y Chilexpress.</li>
+            </ul>
+            <div class="hero__acciones" style="margin-top: 24px">
+              <a href="nosotros.html" class="boton boton--secundario"
+                >Conoce al equipo</a
+              >
+            </div>
+          </div>
+          <div class="hero__imagen">
+            <img
+              src="https://picsum.photos/seed/sonidovivo-taller/700/560"
+              alt="Taller de reparación de guitarras de Sonido Vivo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIO ============ -->
+      <section class="seccion confianza" aria-labelledby="confianza-titulo">
+        <div class="contenedor">
+          <h2 id="confianza-titulo" class="visually-hidden">
+            Comentario de un cliente
+          </h2>
+          <blockquote>
+            "Compré mi primer bajo en Sonido Vivo hace ocho años y hoy siguen
+            siendo los primeros a quienes les pregunto antes de cualquier
+            compra."
+          </blockquote>
+          <cite>— Cliente frecuente, Región de Valparaíso</cite>
+        </div>
+      </section>
+
+      <!-- ============ CTA CONTACTO ============ -->
+      <section class="seccion" style="border-top: none; padding-top: 0">
+        <div class="cta-final">
+          <h2>¿Buscas un instrumento que no ves en el catálogo?</h2>
+          <a href="contacto.html" class="boton boton--secundario">Escríbenos</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ PIE DE PÁGINA ============ -->
+    <footer class="pie">
+      <div class="contenedor pie__grid">
+        <div>
+          <p class="pie__marca">Sonido Vivo</p>
+          <p>
+            Tienda de instrumentos y equipos musicales en Viña del Mar, Región
+            de Valparaíso.
+          </p>
+        </div>
+
+        <div>
+          <h3>Tienda</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Mi cuenta</h3>
+          <ul>
+            <li><a href="login.html">Iniciar sesión</a></li>
+            <li><a href="formularioinscripcion.html">Registrar usuario</a></li>
+            <li><a href="carrito.html">Carrito de compras</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Novedades</h3>
+          <p>Recibe nuestras ofertas y casos curiosos del blog.</p>
+          <form class="pie__form" action="#" method="post">
+            <label for="correo-newsletter" class="visually-hidden"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="correo-newsletter"
+              name="correo-newsletter"
+              placeholder="tu@correo.com"
+            />
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contenedor pie__inferior">
+        <span>© 2026 Sonido Vivo. Todos los derechos reservados.</span>
+        <span>Viña del Mar, Región de Valparaíso, Chile</span>
+      </div>
+    </footer>
+
+    <script src="js/validaform.js"></script>
+  </body>
+</html>

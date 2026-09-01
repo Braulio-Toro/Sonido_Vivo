@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario | Sonido Vivo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../CSS/style.css"/>
+ 
+</head>
+<body>
+
+  <p class="franja-aviso">Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a nuestros clientes</p>
+
+  <header class="encabezado">
+    <div class="encabezado__barra contenedor">
+      <a href="index.html" class="logo" aria-label="Sonido Vivo, ir al inicio">
+        <span class="logo__texto">
+          Sonido Vivo
+          <small>Instrumentos &amp; equipos musicales</small>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="login-contenedor">
+    <div class="tarjeta-login">
+      
+      <!-- Formulario adaptado a las etiquetas del profesor -->
+      <form id="formRegistro" novalidate>
+  <fieldset class="formulario-fieldset">
+    
+    <div class="tarjeta-login__encabezado">
+      <p class="eyebrow">Crea tu cuenta</p>
+      <h1 class="tarjeta-login__titulo">Registro de Usuario</h1>
+      <p class="tarjeta-login__subtitulo">Ingresa tus datos para registrarte en Sonido Vivo</p>
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Pérez">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="rut">RUT:</label>
+      <input type="text" name="rut" id="rut" placeholder="Ej: 12.345.678-9">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="correo">Correo electrónico:</label>
+      <input type="text" name="correo" id="correo" placeholder="ejemplo@gmail.com">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="fono">Teléfono:</label>
+      <input type="text" name="fono" id="fono" placeholder="+56912345678">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="fenac">Fecha de nacimiento:</label>
+      <input type="date" name="fenac" id="fenac">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="pass">Contraseña:</label>
+      <input type="password" name="pass" id="pass" placeholder="••••••••">
+    </div>
+
+    <div class="formulario-grupo">
+      <label for="pass2">Confirmar contraseña:</label>
+      <input type="password" name="pass2" id="pass2" placeholder="••••••••">
+    </div>
+
+    <button type="submit" class="boton boton--principal boton-registro">ENVIAR</button>
+  </fieldset>
+</form>
+
+      <div class="tarjeta-login__registro">
+        <p>¿Ya tienes una cuenta?</p>
+        <a href="login.html">Inicia sesión aquí</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__inferior">
+      <span>© 2026 Sonido Vivo. Todos los derechos reservados.</span>
+      <span>Viña del Mar, Región de Valparaíso, Chile</span>
+    </div>
+  </footer>
+  <script src="js/validaform.js"></script>
+</body>
+</html>

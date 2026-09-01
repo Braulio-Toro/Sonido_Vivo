@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Sonido Vivo</title>
+    <meta name="description" content="Casos curiosos y noticias sobre instrumentos musicales, contados por el equipo de Sonido Vivo." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../CSS/style.css"/>
+</head>
+
+<body>
+
+  <p class="franja-aviso">Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a nuestros clientes</p>
+
+  <header class="encabezado">
+    <div class="encabezado__barra contenedor">
+      <a href="index.html" class="logo" aria-label="Sonido Vivo, ir al inicio">
+        <span class="logo__texto">
+          Sonido Vivo
+          <small>Instrumentos &amp; equipos musicales</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal">
+        ☰ <span class="visually-hidden">Abrir menú</span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html" class="activo" aria-current="page">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="encabezado__acciones">
+        <div class="enlaces-cuenta" id="enlaces-cuenta">
+          <a href="login.html">Iniciar sesión</a>
+          <a href="formularioinscripcion.html">Registrar usuario</a>
+        </div>
+        <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+          <span class="carrito__icono" aria-hidden="true">🛒</span>
+          <span>Cart (<span id="contadorCarrito">0</span>)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="seccion" aria-labelledby="blogs-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <div>
+            <p class="eyebrow">Casos curiosos</p>
+            <h1 id="blogs-titulo">Noticias importantes</h1>
+          </div>
+        </div>
+
+        <div class="grilla-blogs">
+
+          <article class="tarjeta-blog">
+            <a href="blogdetalleuno.html" class="tarjeta-blog__imagen">
+              <img src="https://picsum.photos/seed/blog-guitarra-vintage/500/350" alt="Guitarra vintage restaurada" />
+            </a>
+            <div class="tarjeta-blog__cuerpo">
+              <h2 class="tarjeta-blog__titulo"><a href="blogdetalleuno.html">Caso curioso #1: la guitarra que viajó 40 años en un ático</a></h2>
+              <p class="tarjeta-blog__resumen">
+                Un cliente trajo una guitarra que llevaba cuatro décadas guardada. Así fue
+                el proceso de devolverle el sonido original sin perder su historia.
+              </p>
+              <a href="blogdetalleuno.html" class="tarjeta-blog__boton">Ver caso</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-blog">
+            <a href="blogdetalledos.html" class="tarjeta-blog__imagen">
+              <img src="https://picsum.photos/seed/blog-bateria-escolar/500/350" alt="Batería de una banda escolar" />
+            </a>
+            <div class="tarjeta-blog__cuerpo">
+              <h2 class="tarjeta-blog__titulo"><a href="blogdetalledos.html">Caso curioso #2: cómo armamos la banda de un liceo con presupuesto ajustado</a></h2>
+              <p class="tarjeta-blog__resumen">
+                Un liceo de Viña del Mar necesitaba equipar su banda musical con un
+                presupuesto acotado. Esta es la solución que armamos junto a ellos.
+              </p>
+              <a href="blogdetalledos.html" class="tarjeta-blog__boton">Ver caso</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="pie__marca">Sonido Vivo</p>
+        <p>Tienda de instrumentos y equipos musicales en Viña del Mar, Región de Valparaíso.</p>
+      </div>
+
+      <div>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Mi cuenta</h3>
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="formularioinscripcion.html">Registrar usuario</a></li>
+          <li><a href="carrito.html">Carrito de compras</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Novedades</h3>
+        <p>Recibe nuestras ofertas y casos curiosos del blog.</p>
+        <form class="pie__form" action="#" method="post">
+          <label for="correo-newsletter" class="visually-hidden">Correo electrónico</label>
+          <input type="email" id="correo-newsletter" name="correo-newsletter" placeholder="tu@correo.com" />
+          <button type="submit">Suscribir</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contenedor pie__inferior">
+      <span>© 2026 Sonido Vivo. Todos los derechos reservados.</span>
+      <span>Viña del Mar, Región de Valparaíso, Chile</span>
+    </div>
+  </footer>
+
+  <script src="js/validaform.js"></script>
+</body>
+</html>

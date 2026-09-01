@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Sonido Vivo</title>
+    <meta name="description" content="Conoce la historia y el equipo detrás de Sonido Vivo, tienda de instrumentos musicales en Viña del Mar." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../CSS/style.css"/>
+</head>
+
+<body>
+
+  <p class="franja-aviso">Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a nuestros clientes</p>
+
+  <header class="encabezado">
+    <div class="encabezado__barra contenedor">
+      <a href="index.html" class="logo" aria-label="Sonido Vivo, ir al inicio">
+        <span class="logo__texto">
+          Sonido Vivo
+          <small>Instrumentos &amp; equipos musicales</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal">
+        ☰ <span class="visually-hidden">Abrir menú</span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html" class="activo" aria-current="page">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="encabezado__acciones">
+        <div class="enlaces-cuenta" id="enlaces-cuenta">
+          <a href="login.html">Iniciar sesión</a>
+          <a href="formularioinscripcion.html">Registrar usuario</a>
+        </div>
+        <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+          <span class="carrito__icono" aria-hidden="true">🛒</span>
+          <span>Cart (<span id="contadorCarrito">0</span>)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO NOSOTROS ============ -->
+    <section class="hero" aria-labelledby="nosotros-hero-titulo">
+      <div class="contenedor hero__grid">
+        <div class="hero__contenido">
+          <p class="eyebrow">Nuestra historia</p>
+          <h1 id="nosotros-hero-titulo" class="hero__titulo">Músicos vendiéndole a <em>músicos</em></h1>
+          <p class="hero__texto">
+            Sonido Vivo nació en Viña del Mar hace 11 años como un mesón atendido por su
+            propio dueño. Hoy somos un equipo de tres personas que conoce cada instrumento
+            del catálogo porque los toca, los repara y los recomienda con criterio.
+          </p>
+        </div>
+
+        <div class="hero__imagen">
+          <img src="https://picsum.photos/seed/sonidovivo-equipo/800/600" alt="Equipo de Sonido Vivo en el mesón de atención de la tienda" />
+          <span class="hero__etiqueta">Viña del Mar, desde 2015</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NUESTRA HISTORIA ============ -->
+    <section class="seccion" aria-labelledby="historia-titulo">
+      <div class="contenedor nosotros__grid">
+        <div>
+          <p class="eyebrow">Cómo empezamos</p>
+          <h2 id="historia-titulo">Once años afinando a la escena musical de Valparaíso</h2>
+          <p>
+            Todo comenzó con una guitarra reparada en el living de una casa y la convicción
+            de que la Región de Valparaíso necesitaba una tienda que entendiera de verdad
+            lo que significa tocar en vivo. Desde entonces hemos ayudado a cientos de
+            músicos, bandas escolares y estudios de grabación a encontrar el instrumento
+            correcto para cada escenario.
+          </p>
+          <ul class="nosotros__lista">
+            <li>Atención especializada por músicos, para músicos.</li>
+            <li>Servicio de reparación de instrumentos de cuerda.</li>
+            <li>Despacho a regiones vía Starken y Chilexpress.</li>
+            <li>Asesoría personalizada antes de cada compra.</li>
+          </ul>
+        </div>
+        <div class="hero__imagen">
+          <img src="https://picsum.photos/seed/sonidovivo-taller-2/700/560" alt="Guitarra siendo reparada en el taller de Sonido Vivo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EQUIPO ============ -->
+    <section class="seccion categorias" aria-labelledby="equipo-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <div>
+            <p class="eyebrow">Quiénes somos</p>
+            <h2 id="equipo-titulo">Nuestro equipo</h2>
+          </div>
+        </div>
+
+        <div class="grilla-equipo">
+          <article class="miembro-equipo">
+            <img src="https://picsum.photos/seed/equipo-1/400/400" alt="Fundador y guitarrista de Sonido Vivo" />
+            <div class="miembro-equipo__cuerpo">
+              <h3 class="miembro-equipo__nombre">Rodrigo Fuentes</h3>
+              <p class="miembro-equipo__cargo">Fundador &amp; luthier</p>
+            </div>
+          </article>
+
+          <article class="miembro-equipo">
+            <img src="https://picsum.photos/seed/equipo-2/400/400" alt="Vendedora especialista en percusión" />
+            <div class="miembro-equipo__cuerpo">
+              <h3 class="miembro-equipo__nombre">Camila Reyes</h3>
+              <p class="miembro-equipo__cargo">Especialista en percusión</p>
+            </div>
+          </article>
+
+          <article class="miembro-equipo">
+            <img src="https://picsum.photos/seed/equipo-3/400/400" alt="Vendedor especialista en amplificación" />
+            <div class="miembro-equipo__cuerpo">
+              <h3 class="miembro-equipo__nombre">Diego Salinas</h3>
+              <p class="miembro-equipo__cargo">Especialista en amplificación</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="seccion" style="border-top:none;">
+      <div class="cta-final">
+        <h2>¿Tienes dudas sobre algún instrumento?</h2>
+        <a href="contacto.html" class="boton boton--secundario">Escríbenos</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="pie__marca">Sonido Vivo</p>
+        <p>Tienda de instrumentos y equipos musicales en Viña del Mar, Región de Valparaíso.</p>
+      </div>
+
+      <div>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Mi cuenta</h3>
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="formularioinscripcion.html">Registrar usuario</a></li>
+          <li><a href="carrito.html">Carrito de compras</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Novedades</h3>
+        <p>Recibe nuestras ofertas y casos curiosos del blog.</p>
+        <form class="pie__form" action="#" method="post">
+          <label for="correo-newsletter" class="visually-hidden">Correo electrónico</label>
+          <input type="email" id="correo-newsletter" name="correo-newsletter" placeholder="tu@correo.com" />
+          <button type="submit">Suscribir</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contenedor pie__inferior">
+      <span>© 2026 Sonido Vivo. Todos los derechos reservados.</span>
+      <span>Viña del Mar, Región de Valparaíso, Chile</span>
+    </div>
+  </footer>
+
+  <script src="js/validaform.js"></script>
+</body>
+</html>
