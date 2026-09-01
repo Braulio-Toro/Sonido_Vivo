@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editar producto | Administración | Sonido Vivo</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../IMG/logo2.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../CSS/admin.css"
+    >
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <aside class="admin__menu">
+
+        <div class="admin__logo">
+
+            <img
+                src="../IMG/logo2.png"
+                alt="Logo Sonido Vivo"
+            >
+
+            <div>
+
+                <strong>Sonido Vivo</strong>
+
+                <small>Administración</small>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin__perfil">
+
+            <div class="admin__perfil-icono">
+                👤
+            </div>
+
+            <div>
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+                <small id="rolUsuario">
+                    Administrador
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin__nav">
+
+            <p class="admin__nav-titulo">
+                PRINCIPAL
+            </p>
+
+            <a
+                href="admin.html"
+                class="admin__nav-enlace"
+            >
+                <span>⌂</span>
+                Home
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                PRODUCTOS
+            </p>
+
+            <a
+                href="admin-productos.html"
+                class="admin__nav-enlace"
+            >
+                <span>♫</span>
+                Mostrar productos
+            </a>
+
+            <a
+                href="admin-producto-nuevo.html"
+                class="admin__nav-enlace"
+            >
+                <span>＋</span>
+                Nuevo producto
+            </a>
+
+            <a
+                href="admin-producto-editar.html"
+                class="admin__nav-enlace admin__nav-enlace--activo"
+            >
+                <span>✎</span>
+                Editar producto
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                USUARIOS
+            </p>
+
+            <a
+                href="admin-usuarios.html"
+                class="admin__nav-enlace"
+            >
+                <span>♙</span>
+                Mostrar usuarios
+            </a>
+
+            <a
+                href="admin-usuario-nuevo.html"
+                class="admin__nav-enlace"
+            >
+                <span>＋</span>
+                Nuevo usuario
+            </a>
+
+            <a
+                href="admin-usuario-editar.html"
+                class="admin__nav-enlace"
+            >
+                <span>✎</span>
+                Editar usuario
+            </a>
+
+        </nav>
+
+
+        <div class="admin__menu-inferior">
+
+            <a
+                href="index.html"
+                class="admin__nav-enlace"
+            >
+                <span>←</span>
+                Volver a la tienda
+            </a>
+
+            <button
+                type="button"
+                id="cerrarSesion"
+                class="admin__cerrar"
+            >
+                <span>↪</span>
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="admin__contenido">
+
+        <header class="admin__topbar">
+
+            <div>
+
+                <p class="admin__breadcrumb">
+                    Administración / Productos / Editar
+                </p>
+
+                <h1>
+                    Editar producto
+                </h1>
+
+            </div>
+
+            <div class="admin__topbar-usuario">
+
+                <span id="rolTopbar">
+                    Administrador
+                </span>
+
+                <div class="admin__avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="admin__seccion">
+
+            <div class="admin__seccion-cabecera">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        Catálogo
+                    </p>
+
+                    <h2>
+                        Modificar producto
+                    </h2>
+
+                    <p>
+                        Modifica la información del producto
+                        seleccionado.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="formEditarProducto"
+                class="admin__formulario"
+            >
+
+                <input
+                    type="hidden"
+                    id="indiceProducto"
+                >
+
+
+                <div class="admin__formulario-grid">
+
+
+                    <div class="admin__campo">
+
+                        <label for="codigoProducto">
+                            Código producto *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigoProducto"
+                            minlength="3"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin__campo">
+
+                        <label for="nombreProducto">
+                            Nombre *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreProducto"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin__campo admin__campo--completo">
+
+                        <label for="descripcionProducto">
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="descripcionProducto"
+                            maxlength="500"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="admin__campo">
+
+                        <label for="precioProducto">
+                            Precio *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="precioProducto"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin__campo">
+
+                        <label for="stockProducto">
+                            Stock *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="stockProducto"
+                            min="0"
+                            step="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin__campo">
+
+                        <label for="stockCritico">
+                            Stock crítico
+                        </label>
+
+                        <input
+                            type="number"
+                            id="stockCritico"
+                            min="0"
+                            step="1"
+                        >
+
+                    </div>
+
+
+                    <div class="admin__campo">
+
+                        <label for="categoriaProducto">
+                            Categoría *
+                        </label>
+
+                        <select
+                            id="categoriaProducto"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar categoría
+                            </option>
+
+                            <option value="Cuerdas">
+                                Cuerdas
+                            </option>
+
+                            <option value="Percusión">
+                                Percusión
+                            </option>
+
+                            <option value="Teclados">
+                                Teclados
+                            </option>
+
+                            <option value="Viento">
+                                Viento
+                            </option>
+
+                            <option value="Amplificación">
+                                Amplificación
+                            </option>
+
+                            <option value="Accesorios">
+                                Accesorios
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin__campo admin__campo--completo">
+
+                        <label for="imagenProducto">
+                            Imagen
+                        </label>
+
+                        <input
+                            type="text"
+                            id="imagenProducto"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="admin__formulario-acciones">
+
+                    <a
+                        href="admin-productos.html"
+                        class="admin__boton admin__boton--secundario"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="admin__boton"
+                    >
+                        Guardar cambios
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../JS/admin.js"></script>
+
+</body>
+
+</html>

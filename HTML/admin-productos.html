@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Productos | Administración | Sonido Vivo</title>
+
+    <meta
+        name="description"
+        content="Administración de productos de Sonido Vivo."
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../IMG/logo2.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../CSS/admin.css"
+    >
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <!-- MENÚ -->
+
+    <aside class="admin__menu">
+
+        <div class="admin__logo">
+
+            <img
+                src="../IMG/logo2.png"
+                alt="Logo Sonido Vivo"
+            >
+
+            <div>
+
+                <strong>Sonido Vivo</strong>
+
+                <small>Administración</small>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin__perfil">
+
+            <div class="admin__perfil-icono">
+                👤
+            </div>
+
+            <div>
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+                <small id="rolUsuario">
+                    Administrador
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin__nav">
+
+            <p class="admin__nav-titulo">
+                PRINCIPAL
+            </p>
+
+            <a
+                href="admin.html"
+                class="admin__nav-enlace"
+            >
+                <span>⌂</span>
+                Home
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                PRODUCTOS
+            </p>
+
+            <a
+                href="admin-productos.html"
+                class="admin__nav-enlace admin__nav-enlace--activo"
+            >
+                <span>♫</span>
+                Mostrar productos
+            </a>
+
+            <a
+                href="admin-producto-nuevo.html"
+                class="admin__nav-enlace"
+            >
+                <span>＋</span>
+                Nuevo producto
+            </a>
+
+            <a
+                href="admin-producto-editar.html"
+                class="admin__nav-enlace"
+            >
+                <span>✎</span>
+                Editar producto
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                USUARIOS
+            </p>
+
+            <a
+                href="admin-usuarios.html"
+                class="admin__nav-enlace"
+            >
+                <span>♙</span>
+                Mostrar usuarios
+            </a>
+
+            <a
+                href="admin-usuario-nuevo.html"
+                class="admin__nav-enlace"
+            >
+                <span>＋</span>
+                Nuevo usuario
+            </a>
+
+            <a
+                href="admin-usuario-editar.html"
+                class="admin__nav-enlace"
+            >
+                <span>✎</span>
+                Editar usuario
+            </a>
+
+        </nav>
+
+
+        <div class="admin__menu-inferior">
+
+            <a
+                href="index.html"
+                class="admin__nav-enlace"
+            >
+                <span>←</span>
+                Volver a la tienda
+            </a>
+
+            <button
+                type="button"
+                id="cerrarSesion"
+                class="admin__cerrar"
+            >
+                <span>↪</span>
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="admin__contenido">
+
+        <header class="admin__topbar">
+
+            <div>
+
+                <p class="admin__breadcrumb">
+                    Administración / Productos
+                </p>
+
+                <h1>
+                    Productos
+                </h1>
+
+            </div>
+
+            <div class="admin__topbar-usuario">
+
+                <span id="rolTopbar">
+                    Administrador
+                </span>
+
+                <div class="admin__avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="admin__seccion">
+
+            <div class="admin__seccion-cabecera">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        Catálogo
+                    </p>
+
+                    <h2>
+                        Listado de productos
+                    </h2>
+
+                    <p>
+                        Administra los productos disponibles
+                        en la tienda.
+                    </p>
+
+                </div>
+
+                <a
+                    href="admin-producto-nuevo.html"
+                    class="admin__boton"
+                >
+                    ＋ Nuevo producto
+                </a>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="admin__filtros">
+
+                <div class="admin__buscador">
+
+                    <label
+                        for="buscarProducto"
+                        class="visually-hidden"
+                    >
+                        Buscar producto
+                    </label>
+
+                    <input
+                        type="search"
+                        id="buscarProducto"
+                        placeholder="Buscar producto..."
+                    >
+
+                </div>
+
+
+                <div class="admin__filtro-categoria">
+
+                    <label
+                        for="filtroCategoria"
+                        class="visually-hidden"
+                    >
+                        Categoría
+                    </label>
+
+                    <select id="filtroCategoria">
+
+                        <option value="">
+                            Todas las categorías
+                        </option>
+
+                        <option value="Cuerdas">
+                            Cuerdas
+                        </option>
+
+                        <option value="Percusión">
+                            Percusión
+                        </option>
+
+                        <option value="Teclados">
+                            Teclados
+                        </option>
+
+                        <option value="Viento">
+                            Viento
+                        </option>
+
+                        <option value="Amplificación">
+                            Amplificación
+                        </option>
+
+                        <option value="Accesorios">
+                            Accesorios
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLA -->
+
+            <div class="admin__tabla-contenedor">
+
+                <table class="admin__tabla">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Código</th>
+
+                            <th>Producto</th>
+
+                            <th>Categoría</th>
+
+                            <th>Precio</th>
+
+                            <th>Stock</th>
+
+                            <th>Estado</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaProductos">
+
+                    </tbody>
+
+                </table>
+
+
+                <div
+                    id="sinProductos"
+                    class="admin__sin-resultados"
+                >
+
+                    <div>♫</div>
+
+                    <h3>
+                        No hay productos
+                    </h3>
+
+                    <p>
+                        Todavía no existen productos
+                        registrados en el sistema.
+                    </p>
+
+                    <a
+                        href="admin-producto-nuevo.html"
+                        class="admin__boton"
+                    >
+                        ＋ Crear primer producto
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../JS/admin.js"></script>
+
+</body>
+
+</html>

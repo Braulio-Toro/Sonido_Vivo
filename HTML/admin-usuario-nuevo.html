@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nuevo usuario | Administración | Sonido Vivo</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../IMG/logo2.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../CSS/admin.css"
+    >
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <aside class="admin__menu">
+
+        <div class="admin__logo">
+
+            <img
+                src="../IMG/logo2.png"
+                alt="Logo Sonido Vivo"
+            >
+
+            <div>
+
+                <strong>Sonido Vivo</strong>
+
+                <small>Administración</small>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin__perfil">
+
+            <div class="admin__perfil-icono">
+                👤
+            </div>
+
+            <div>
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+                <small id="rolUsuario">
+                    Administrador
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin__nav">
+
+            <p class="admin__nav-titulo">
+                PRINCIPAL
+            </p>
+
+            <a
+                href="admin.html"
+                class="admin__nav-enlace"
+            >
+                <span>⌂</span>
+                Home
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                PRODUCTOS
+            </p>
+
+            <a
+                href="admin-productos.html"
+                class="admin__nav-enlace"
+            >
+                <span>♫</span>
+                Mostrar productos
+            </a>
+
+            <a
+                href="admin-producto-nuevo.html"
+                class="admin__nav-enlace"
+            >
+                <span>＋</span>
+                Nuevo producto
+            </a>
+
+            <a
+                href="admin-producto-editar.html"
+                class="admin__nav-enlace"
+            >
+                <span>✎</span>
+                Editar producto
+            </a>
+
+
+            <p class="admin__nav-titulo">
+                USUARIOS
+            </p>
+
+            <a
+                href="admin-usuarios.html"
+                class="admin__nav-enlace"
+            >
+                <span>♙</span>
+                Mostrar usuarios
+            </a>
+
+            <a
+                href="admin-usuario-nuevo.html"
+                class="admin__nav-enlace admin__nav-enlace--activo"
+            >
+                <span>＋</span>
+                Nuevo usuario
+            </a>
+
+            <a
+                href="admin-usuario-editar.html"
+                class="admin__nav-enlace"
+            >
+                <span>✎</span>
+                Editar usuario
+            </a>
+
+        </nav>
+
+
+        <div class="admin__menu-inferior">
+
+            <a
+                href="index.html"
+                class="admin__nav-enlace"
+            >
+                <span>←</span>
+                Volver a la tienda
+            </a>
+
+            <button
+                type="button"
+                id="cerrarSesion"
+                class="admin__cerrar"
+            >
+                <span>↪</span>
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="admin__contenido">
+
+        <header class="admin__topbar">
+
+            <div>
+
+                <p class="admin__breadcrumb">
+                    Administración / Usuarios / Nuevo
+                </p>
+
+                <h1>
+                    Nuevo usuario
+                </h1>
+
+            </div>
+
+
+            <div class="admin__topbar-usuario">
+
+                <span id="rolTopbar">
+                    Administrador
+                </span>
+
+                <div class="admin__avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="admin__seccion">
+
+            <div class="admin__seccion-cabecera">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        Usuarios
+                    </p>
+
+                    <h2>
+                        Crear usuario
+                    </h2>
+
+                    <p>
+                        Completa la información del nuevo usuario.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="formNuevoUsuario"
+                class="admin__formulario"
+            >
+
+                <div class="admin__formulario-grid">
+
+
+                    <!-- RUN -->
+
+                    <div class="admin__campo">
+
+                        <label for="runUsuario">
+                            RUN *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="runUsuario"
+                            name="runUsuario"
+                            minlength="7"
+                            maxlength="9"
+                            placeholder="19011022K"
+                            required
+                        >
+
+                        <small>
+                            Sin puntos ni guion.
+                        </small>
+
+                    </div>
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="admin__campo">
+
+                        <label for="nombreUsuarioFormulario">
+                            Nombre *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreUsuarioFormulario"
+                            name="nombreUsuario"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- APELLIDOS -->
+
+                    <div class="admin__campo">
+
+                        <label for="apellidosUsuario">
+                            Apellidos *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellidosUsuario"
+                            name="apellidosUsuario"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CORREO -->
+
+                    <div class="admin__campo">
+
+                        <label for="correoUsuario">
+                            Correo *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correoUsuario"
+                            name="correoUsuario"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- FECHA -->
+
+                    <div class="admin__campo">
+
+                        <label for="fechaNacimiento">
+                            Fecha de nacimiento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaNacimiento"
+                            name="fechaNacimiento"
+                        >
+
+                    </div>
+
+
+                    <!-- TIPO -->
+
+                    <div class="admin__campo">
+
+                        <label for="tipoUsuario">
+                            Tipo de usuario *
+                        </label>
+
+                        <select
+                            id="tipoUsuario"
+                            name="tipoUsuario"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar perfil
+                            </option>
+
+                            <option value="Administrador">
+                                Administrador
+                            </option>
+
+                            <option value="Vendedor">
+                                Vendedor
+                            </option>
+
+                            <option value="Cliente">
+                                Cliente
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- REGIÓN -->
+
+                    <div class="admin__campo">
+
+                        <label for="regionUsuario">
+                            Región *
+                        </label>
+
+                        <select
+                            id="regionUsuario"
+                            name="regionUsuario"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar región
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- COMUNA -->
+
+                    <div class="admin__campo">
+
+                        <label for="comunaUsuario">
+                            Comuna *
+                        </label>
+
+                        <select
+                            id="comunaUsuario"
+                            name="comunaUsuario"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar comuna
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DIRECCIÓN -->
+
+                    <div class="admin__campo admin__campo--completo">
+
+                        <label for="direccionUsuario">
+                            Dirección *
+                        </label>
+
+                        <textarea
+                            id="direccionUsuario"
+                            name="direccionUsuario"
+                            maxlength="300"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                        <small>
+                            Máximo 300 caracteres.
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="admin__formulario-acciones">
+
+                    <a
+                        href="admin-usuarios.html"
+                        class="admin__boton admin__boton--secundario"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="admin__boton"
+                    >
+                        Guardar usuario
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../JS/admin.js"></script>
+
+</body>
+
+</html>
