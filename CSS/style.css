@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  background-color: #f2f7f4; /* Gris verdoso muy claro para un fondo suave */
-  color: #121f17;           /* Verde casi negro de alto contraste para lectura */
+  background-color: #f2f7f4;
+  color: #121f17;
   line-height: 1.6;
 }
 
@@ -51,22 +51,19 @@ ul {
   font-family: 'Space Mono', monospace;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #137547; /* Verde medio visible */
+  color: #137547; 
   letter-spacing: 1.5px;
   margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   2. FRANJA AVISO Y ENCABEZADO
-   ========================================================================== */
 .franja-aviso {
-  background-color: #0a2f1d; /* Verde bosque muy oscuro */
-  color: #ffffff;           /* Texto blanco puro para máximo contraste */
+  background-color: #0a2f1d;
+  color: #ffffff;
   text-align: center;
   padding: 8px 15px;
   font-size: 0.85rem;
   font-family: 'Space Mono', monospace;
-  border-bottom: 2px solid #00ff87; /* Detalle verde lima */
+  border-bottom: 2px solid #00ff87;
 }
 
 .encabezado {
@@ -183,6 +180,78 @@ ul {
 
 .carrito:hover {
   background-color: #137547;
+}
+
+.selector-cantidad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 42px;
+  background-color: #f2f7f4;
+  border: 1px solid #c8d6ce;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.selector-cantidad:hover {
+  border-color: #137547;
+  box-shadow: 0 4px 12px rgba(19, 117, 71, 0.12);
+}
+
+/* Botones + y - */
+
+.selector-cantidad__boton {
+  width: 38px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: #0a2f1d;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.selector-cantidad__boton:hover {
+  background-color: #0a2f1d;
+  color: #00ff87;
+}
+
+.selector-cantidad__boton:active {
+  background-color: #137547;
+  color: #ffffff;
+}
+
+/* Número de cantidad */
+
+.cantidad-item {
+  width: 39px;
+  height: 100%;
+  border: none;
+  border-left: 1px solid #c8d6ce;
+  border-right: 1px solid #c8d6ce;
+  background-color: #ffffff;
+  color: #0a2f1d;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  appearance: textfield;
+}
+
+/* Quitar flechas del input number */
+
+.cantidad-item::-webkit-inner-spin-button,
+.cantidad-item::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -1214,7 +1283,7 @@ ul {
   max-width: 900px;
   height: 500px;
   object-fit: cover;
-  object-position: 50% 80%;
+  object-position: 50% 70%;
   display: block;
   margin: 30px auto;
 }

@@ -1,31 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesión | Sonido Vivo</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="../IMG/logo2.png">
-  <link rel="stylesheet" href="../CSS/style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonido Vivo | Tienda de Instrumentos y Equipos Musicales</title>
+    <meta
+      name="description"
+      content="Sonido Vivo: guitarras, bajos, baterías, teclados, amplificadores, micrófonos y pedales de efectos en Viña del Mar. Compra en tienda o en línea."
+    />
 
-  <p class="franja-aviso">Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a nuestros clientes</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../IMG/logo2.png">
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
 
-  <header class="encabezado">
-    <div class="encabezado__barra contenedor">
-      <a href="index.html" class="logo" aria-label="Sonido Vivo, ir al inicio">
-        <img src="../IMG/logo2.png" alt="Sonido Vivo" class="logo__imagen">
-        <span class="logo__texto">
-          Sonido Vivo
-          <small>Instrumentos &amp; equipos musicales</small>
-        </span>
+  <body>
+    <p class="franja-aviso">
+      Envíos a todo Chile · Retiro en tienda, Viña del Mar · 11 años afinando a
+      nuestros clientes
+    </p>
+
+    <header class="encabezado">
+      <div class="encabezado__barra contenedor">
+        <a href="index.html" class="logo">
+          <img src="../IMG/logo2.png" alt="Sonido Vivo" class="logo__imagen">
+          <span class="logo__texto"> Sonido Vivo
+          <small>Instrumentos & equipos musicales</small>
+          </span>
       </a>
-    </div>
-  </header>
+
+        <button
+          class="menu-toggle"
+          id="botonMenu"
+          aria-expanded="false"
+          aria-controls="navPrincipal"
+        >
+          ☰ <span class="visually-hidden">Abrir menú</span>
+        </button>
+
+        <nav
+          class="nav-principal"
+          id="navPrincipal"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li>
+              <a href="index.html" class="activo" aria-current="page">Home</a>
+            </li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="encabezado__acciones">
+          <div class="enlaces-cuenta" id="enlaces-cuenta">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="formularioinscripcion.html">Registrar usuario</a>
+          </div>
+          <a
+            href="carrito.html"
+            class="carrito"
+            aria-label="Ver carrito de compras"
+          >
+            <span class="carrito__icono" aria-hidden="true">🛒</span>
+            <span>Cart (<span id="contadorCarrito">0</span>)</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
   <main class="login-contenedor">
     <div class="tarjeta-login">
@@ -63,6 +112,6 @@
     </div>
   </footer>
 
-  <script src="js/validaform.js"></script>
+  <script src="../JS/validaform.js"></script>
 </body>
 </html>
