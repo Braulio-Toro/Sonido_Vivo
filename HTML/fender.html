@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fender Stratocaster Sunburst | Sonido Vivo</title>
+
+    <meta
+        name="description"
+        content="Fender Stratocaster Sunburst disponible en Sonido Vivo."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../IMG/logo2.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ============ FRANJA AVISO ============ -->
+
+    <p class="franja-aviso">
+
+        Envíos a todo Chile · Retiro en tienda, Viña del Mar ·
+        11 años afinando a nuestros clientes
+
+    </p>
+
+
+    <!-- ============ ENCABEZADO ============ -->
+
+    <header class="encabezado">
+
+        <div class="encabezado__barra contenedor">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Sonido Vivo, ir al inicio"
+            >
+
+                <img
+                    src="../IMG/logo2.png"
+                    alt="Sonido Vivo"
+                    class="logo__imagen"
+                >
+
+                <span class="logo__texto">
+
+                    Sonido Vivo
+
+                    <small>
+                        Instrumentos &amp; equipos musicales
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="botonMenu"
+                aria-expanded="false"
+                aria-controls="navPrincipal"
+            >
+
+                ☰
+
+                <span class="visually-hidden">
+                    Abrir menú
+                </span>
+
+            </button>
+
+
+            <nav
+                class="nav-principal"
+                id="navPrincipal"
+                aria-label="Navegación principal"
+            >
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="productos.html"
+                            class="activo"
+                            aria-current="page"
+                        >
+                            Productos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nosotros.html">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blogs.html">
+                            Blogs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="encabezado__acciones">
+
+                <div
+                    class="enlaces-cuenta"
+                    id="enlaces-cuenta"
+                >
+
+                    <a href="login.html">
+                        Iniciar sesión
+                    </a>
+
+                    <a href="formularioinscripcion.html">
+                        Registrar usuario
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="carrito.html"
+                    class="carrito"
+                    aria-label="Ver carrito de compras"
+                >
+
+                    <span
+                        class="carrito__icono"
+                        aria-hidden="true"
+                    >
+                        🛒
+                    </span>
+
+                    <span>
+
+                        Cart (
+
+                        <span id="contadorCarrito">
+                            0
+                        </span>
+
+                        )
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============ PRODUCTO ============ -->
+
+    <main>
+
+        <section
+            class="seccion detalle-producto"
+            aria-labelledby="producto-nombre"
+        >
+
+            <div class="contenedor">
+
+
+                <!-- Migas de navegación -->
+
+                <div class="producto__ruta">
+
+                    <a href="productos.html">
+                        Productos
+                    </a>
+
+                    <span>
+                        /
+                    </span>
+
+                    <span>
+                        Guitarras
+                    </span>
+
+                </div>
+
+
+                <div class="detalle-producto__grid">
+
+
+                    <!-- ============ IMAGEN ============ -->
+
+                    <div class="detalle-producto__imagen">
+
+                        <div class="detalle-producto__imagen-marco">
+
+                            <img
+                                src="../IMG/Guitarra.png"
+                                alt="Fender Stratocaster Sunburst"
+                                id="imagenPrincipal"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ============ INFORMACIÓN ============ -->
+
+                    <div class="detalle-producto__informacion">
+
+                        <p class="eyebrow">
+                            Guitarras
+                        </p>
+
+
+                        <h1
+                            id="producto-nombre"
+                            class="detalle-producto__titulo"
+                        >
+                            Fender Stratocaster Sunburst
+                        </h1>
+
+
+                        <p class="detalle-producto__codigo">
+
+                            Código:
+                            SV-GTR-001
+
+                        </p>
+
+
+                        <p class="detalle-producto__descripcion">
+
+                            Guitarra eléctrica Fender Stratocaster
+                            Sunburst diseñada para músicos que buscan
+                            un sonido versátil, clásico y definido.
+
+                            Su configuración permite utilizarla tanto
+                            en presentaciones en vivo como en sesiones
+                            de estudio.
+
+                        </p>
+
+
+                        <!-- Precio -->
+
+                        <div class="detalle-producto__precio">
+
+                            <strong id="precioProducto">
+                                $899.990
+                            </strong>
+
+                            <span>
+                                Precio final
+                            </span>
+
+                        </div>
+
+
+                        <!-- Disponibilidad -->
+
+                        <div class="producto__disponibilidad">
+
+                            <span class="producto__disponibilidad-punto">
+                            </span>
+
+                            Producto disponible
+
+                        </div>
+
+
+                        <!-- Compra -->
+
+                        <form
+                            id="formAgregarCarrito"
+                            class="producto__compra"
+                        >
+
+
+                            <!-- Selector -->
+
+                            <div class="producto__cantidad">
+
+                                <label for="cantidad">
+                                    Cantidad
+                                </label>
+
+                                <div class="selector-producto">
+
+                                    <button
+                                        type="button"
+                                        id="restarCantidad"
+                                        aria-label="Restar una unidad"
+                                    >
+                                        −
+                                    </button>
+
+                                    <input
+                                        type="number"
+                                        id="cantidad"
+                                        value="1"
+                                        min="1"
+                                        max="10"
+                                        readonly
+                                    >
+
+                                    <button
+                                        type="button"
+                                        id="sumarCantidad"
+                                        aria-label="Sumar una unidad"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Total -->
+
+                            <div class="producto__total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="totalProducto">
+                                    $899.990
+                                </strong>
+
+                            </div>
+
+
+                            <!-- Botón -->
+
+                            <button
+                                type="submit"
+                                class="boton boton--principal producto__boton"
+                            >
+                                Añadir al carrito
+                            </button>
+
+
+                            <!-- Mensaje -->
+
+                            <div
+                                class="producto__mensaje"
+                                id="mensajeCarrito"
+                                aria-live="polite"
+                            >
+                            </div>
+
+                        </form>
+
+
+                        <!-- Información adicional -->
+
+                        <div class="producto__extra">
+
+                            <button
+                                type="button"
+                                class="producto__extra-boton"
+                                id="botonDetalles"
+                                aria-expanded="false"
+                                aria-controls="detallesTecnicos"
+                            >
+
+                                <span>
+                                    Información del producto
+                                </span>
+
+                                <span id="iconoDetalles">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="producto__extra-contenido"
+                                id="detallesTecnicos"
+                                hidden
+                            >
+
+                                <div class="producto__dato">
+
+                                    <span>
+                                        Tipo
+                                    </span>
+
+                                    <strong>
+                                        Guitarra eléctrica
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="producto__dato">
+
+                                    <span>
+                                        Construcción
+                                    </span>
+
+                                    <strong>
+                                        Cuerpo sólido
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="producto__dato">
+
+                                    <span>
+                                        Acabado
+                                    </span>
+
+                                    <strong>
+                                        Sunburst
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="producto__dato">
+
+                                    <span>
+                                        Mástil
+                                    </span>
+
+                                    <strong>
+                                        Arce
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="producto__dato">
+
+                                    <span>
+                                        Uso recomendado
+                                    </span>
+
+                                    <strong>
+                                        Estudio y escenario
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Beneficios -->
+
+                        <div class="producto__beneficios">
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                Envíos a todo Chile
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                Retiro en tienda
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                Compra segura
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Volver -->
+
+                <div class="detalle-producto__volver">
+
+                    <a
+                        href="productos.html"
+                        class="carrito-compras__seguir"
+                    >
+                        ← Volver al catálogo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============ FOOTER ============ -->
+
+    <footer class="pie">
+
+        <div class="contenedor pie__grid">
+
+
+            <div>
+
+                <p class="pie__marca">
+                    Sonido Vivo
+                </p>
+
+                <p>
+                    Tienda de instrumentos y equipos musicales
+                    en Viña del Mar, Región de Valparaíso.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Tienda
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="productos.html">
+                            Productos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nosotros.html">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blogs.html">
+                            Blogs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Mi cuenta
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="login.html">
+                            Iniciar sesión
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="formularioinscripcion.html">
+                            Registrar usuario
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="carrito.html">
+                            Carrito de compras
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Novedades
+                </h3>
+
+                <p>
+                    Recibe nuestras ofertas y casos curiosos
+                    del blog.
+                </p>
+
+                <form
+                    class="pie__form"
+                    action="#"
+                    method="post"
+                >
+
+                    <label
+                        for="correo-newsletter"
+                        class="visually-hidden"
+                    >
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo-newsletter"
+                        name="correo-newsletter"
+                        placeholder="tu@correo.com"
+                    >
+
+                    <button type="submit">
+                        Suscribir
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="contenedor pie__inferior">
+
+            <span>
+                © 2026 Sonido Vivo. Todos los derechos reservados.
+            </span>
+
+            <span>
+                Viña del Mar, Región de Valparaíso, Chile
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JS ORIGINAL DEL PROYECTO -->
+
+    <script src="../JS/validaform.js"></script>
+
+</body>
+
+</html>

@@ -1265,3 +1265,409 @@ ul {
   border-color: #137547;
   box-shadow: 0 0 0 3px rgba(19, 117, 71, 0.15);
 }
+
+/* ==========================================================================
+   19. DETALLE DE PRODUCTO
+   ========================================================================== */
+
+.detalle-producto {
+    padding-top: 2.5rem;
+}
+
+
+/* Ruta de navegación */
+
+.producto__ruta {
+    font-size: 0.85rem;
+    color: #3a4d43;
+    margin-bottom: 2rem;
+}
+
+.producto__ruta a {
+    color: #137547;
+    font-weight: 600;
+}
+
+.producto__ruta a:hover {
+    color: #0a2f1d;
+}
+
+
+/* Grid principal */
+
+.detalle-producto__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+
+/* Imagen */
+
+.detalle-producto__imagen {
+    position: sticky;
+    top: 110px;
+}
+
+.detalle-producto__imagen-marco {
+    background-color: #ffffff;
+    border: 1px solid #c8d6ce;
+    border-radius: 10px;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(10, 47, 29, 0.08);
+}
+
+.detalle-producto__imagen-marco img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+}
+
+
+/* Información */
+
+.detalle-producto__informacion {
+    padding-top: 1rem;
+}
+
+.detalle-producto__titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 2.8rem;
+    line-height: 1.15;
+    color: #0a2f1d;
+    margin-bottom: 0.5rem;
+}
+
+.detalle-producto__codigo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #3a4d43;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-producto__descripcion {
+    color: #3a4d43;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+}
+
+
+/* Precio */
+
+.detalle-producto__precio {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 1px solid #c8d6ce;
+    padding-top: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.detalle-producto__precio strong {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    color: #137547;
+}
+
+.detalle-producto__precio span {
+    font-size: 0.8rem;
+    color: #3a4d43;
+}
+
+
+/* Disponibilidad */
+
+.producto__disponibilidad {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #137547;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.producto__disponibilidad-punto {
+    width: 9px;
+    height: 9px;
+    background-color: #00ff87;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(0, 255, 135, 0.5);
+}
+
+
+/* Área de compra */
+
+.producto__compra {
+    background-color: #ffffff;
+    border: 1px solid #c8d6ce;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.producto__cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.producto__cantidad label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0a2f1d;
+}
+
+
+/* Selector de cantidad */
+
+.selector-producto {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    border: 1px solid #c8d6ce;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f2f7f4;
+}
+
+.selector-producto button {
+    width: 42px;
+    height: 100%;
+    border: none;
+    background-color: #0a2f1d;
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.selector-producto button:hover {
+    background-color: #137547;
+    color: #00ff87;
+}
+
+.selector-producto input {
+    width: 48px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid #c8d6ce;
+    border-right: 1px solid #c8d6ce;
+    background-color: #ffffff;
+    color: #0a2f1d;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+
+/* Total */
+
+.producto__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #c8d6ce;
+    padding-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.producto__total span {
+    font-weight: 600;
+    color: #0a2f1d;
+}
+
+.producto__total strong {
+    font-family: 'Space Mono', monospace;
+    color: #137547;
+    font-size: 1.3rem;
+}
+
+
+/* Botón */
+
+.producto__boton {
+    width: 100%;
+}
+
+
+/* Mensaje */
+
+.producto__mensaje {
+    min-height: 24px;
+    margin-top: 0.8rem;
+    text-align: center;
+    color: #137547;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* Información adicional */
+
+.producto__extra {
+    margin-top: 1.5rem;
+    border-top: 1px solid #c8d6ce;
+    border-bottom: 1px solid #c8d6ce;
+}
+
+.producto__extra-boton {
+    width: 100%;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #0a2f1d;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.producto__extra-boton:hover {
+    color: #137547;
+}
+
+#iconoDetalles {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    color: #137547;
+}
+
+.producto__extra-contenido {
+    padding-bottom: 1.2rem;
+}
+
+.producto__dato {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    font-size: 0.85rem;
+}
+
+.producto__dato span {
+    color: #3a4d43;
+}
+
+.producto__dato strong {
+    color: #0a2f1d;
+    text-align: right;
+}
+
+
+/* Beneficios */
+
+.producto__beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.producto__beneficios div {
+    background-color: #e2ede6;
+    border-radius: 8px;
+    padding: 0.8rem;
+    text-align: center;
+    color: #3a4d43;
+    font-size: 0.75rem;
+}
+
+.producto__beneficios span {
+    display: block;
+    color: #137547;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+
+/* Volver */
+
+.detalle-producto__volver {
+    margin-top: 2.5rem;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE - DETALLE DE PRODUCTO
+   ========================================================================== */
+
+@media (max-width: 868px) {
+
+    .detalle-producto__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .detalle-producto__imagen {
+        position: static;
+    }
+
+    .detalle-producto__imagen-marco {
+        min-height: 350px;
+    }
+
+    .detalle-producto__imagen-marco img {
+        height: 320px;
+    }
+
+    .detalle-producto__titulo {
+        font-size: 2.2rem;
+    }
+
+    .producto__beneficios {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .detalle-producto {
+        padding-top: 1.5rem;
+    }
+
+    .detalle-producto__titulo {
+        font-size: 1.8rem;
+    }
+
+    .detalle-producto__imagen-marco {
+        min-height: 280px;
+        padding: 1rem;
+    }
+
+    .detalle-producto__imagen-marco img {
+        height: 250px;
+    }
+
+    .producto__cantidad {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .producto__dato {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .producto__dato strong {
+        text-align: left;
+    }
+
+}

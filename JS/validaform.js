@@ -554,3 +554,161 @@ document.addEventListener("DOMContentLoaded", function () {
       formContacto.reset();
     });
   }
+
+//==============================================
+//==============================================
+//==============================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cantidadInput = document.getElementById("cantidadProducto");
+    const botonRestar = document.getElementById("restarProducto");
+    const botonSumar = document.getElementById("sumarProducto");
+
+    const precioProducto = document.getElementById("precioProducto");
+    const totalProducto = document.getElementById("totalProducto");
+
+    const botonAgregar = document.getElementById("agregarCarrito");
+    const mensajeProducto = document.getElementById("mensajeProducto");
+
+    const botonDetalles = document.getElementById("botonDetalles");
+    const detallesTecnicos = document.getElementById("detallesTecnicos");
+    const iconoDetalles = document.getElementById("iconoDetalles");
+
+
+    /* =========================================================
+       PRECIO DEL PRODUCTO
+       ========================================================= */
+
+    const precio = 899990;
+
+
+    /* =========================================================
+       FORMATEAR PRECIO
+       ========================================================= */
+
+    function formatearPrecio(numero) {
+
+        return "$" + numero.toLocaleString("es-CL");
+
+    }
+
+
+    /* =========================================================
+       ACTUALIZAR TOTAL
+       ========================================================= */
+
+    function actualizarTotal() {
+
+        const cantidad = parseInt(cantidadInput.value);
+
+        const total = precio * cantidad;
+
+        totalProducto.textContent = formatearPrecio(total);
+
+    }
+
+
+    /* =========================================================
+       SUMAR
+       ========================================================= */
+
+    botonSumar.addEventListener("click", function () {
+
+        let cantidad = parseInt(cantidadInput.value);
+
+        if (cantidad < 10) {
+
+            cantidad++;
+
+            cantidadInput.value = cantidad;
+
+            actualizarTotal();
+
+        }
+
+    });
+
+
+    /* =========================================================
+       RESTAR
+       ========================================================= */
+
+    botonRestar.addEventListener("click", function () {
+
+        let cantidad = parseInt(cantidadInput.value);
+
+        if (cantidad > 1) {
+
+            cantidad--;
+
+            cantidadInput.value = cantidad;
+
+            actualizarTotal();
+
+        }
+
+    });
+
+
+    /* =========================================================
+       AÑADIR AL CARRITO
+       ========================================================= */
+
+    botonAgregar.addEventListener("click", function () {
+
+        const cantidad = parseInt(cantidadInput.value);
+
+        mensajeProducto.textContent =
+            "✓ " + cantidad +
+            (cantidad === 1 ? " unidad añadida" : " unidades añadidas") +
+            " al carrito.";
+
+        botonAgregar.textContent = "✓ Añadido";
+
+        setTimeout(function () {
+
+            botonAgregar.textContent = "Añadir al carrito";
+
+        }, 1500);
+
+    });
+
+
+    /* =========================================================
+       MOSTRAR / OCULTAR INFORMACIÓN
+       ========================================================= */
+
+    botonDetalles.addEventListener("click", function () {
+
+        const estaOculto = detallesTecnicos.hidden;
+
+        detallesTecnicos.hidden = !estaOculto;
+
+        botonDetalles.setAttribute(
+            "aria-expanded",
+            estaOculto
+        );
+
+        if (estaOculto) {
+
+            iconoDetalles.textContent = "−";
+
+        } else {
+
+            iconoDetalles.textContent = "+";
+
+        }
+
+    });
+
+
+    /* =========================================================
+       INICIALIZAR TOTAL
+       ========================================================= */
+
+    precioProducto.textContent = formatearPrecio(precio);
+
+    actualizarTotal();
+
+});
