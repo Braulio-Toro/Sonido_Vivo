@@ -556,158 +556,210 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 //==============================================
-//==============================================
+// INTERACCIONES DE LA PÁGINA DE PRODUCTO
 //==============================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const cantidadInput = document.getElementById("cantidadProducto");
-    const botonRestar = document.getElementById("restarProducto");
-    const botonSumar = document.getElementById("sumarProducto");
+    // Elementos de cantidad
+    const cantidadInput = document.getElementById("cantidad");
+    const botonRestar = document.getElementById("restarCantidad");
+    const botonSumar = document.getElementById("sumarCantidad");
 
-    const precioProducto = document.getElementById("precioProducto");
+    // Elementos del precio
+    const precioProducto = document.querySelector(".detalle-producto__precio");
     const totalProducto = document.getElementById("totalProducto");
 
-    const botonAgregar = document.getElementById("agregarCarrito");
-    const mensajeProducto = document.getElementById("mensajeProducto");
+    // Elementos del carrito
+    const formAgregarCarrito = document.getElementById("formAgregarCarrito");
+    const mensajeProducto = document.getElementById("mensajeCarrito");
 
+    // Elementos de información del producto
     const botonDetalles = document.getElementById("botonDetalles");
     const detallesTecnicos = document.getElementById("detallesTecnicos");
     const iconoDetalles = document.getElementById("iconoDetalles");
 
 
-    /* =========================================================
-       PRECIO DEL PRODUCTO
-       ========================================================= */
+    // =========================================================
+    // PRECIO DEL PRODUCTO
+    // =========================================================
 
-    const precio = 899990;
+    if (!precioProducto) return;
+
+    const precio = Number(
+        precioProducto.textContent.replace(/[^0-9]/g, "")
+    );
 
 
-    /* =========================================================
-       FORMATEAR PRECIO
-       ========================================================= */
+    // =========================================================
+    // FORMATEAR PRECIO
+    // =========================================================
 
     function formatearPrecio(numero) {
-
         return "$" + numero.toLocaleString("es-CL");
-
     }
 
 
-    /* =========================================================
-       ACTUALIZAR TOTAL
-       ========================================================= */
+    // =========================================================
+    // ACTUALIZAR TOTAL
+    // =========================================================
 
     function actualizarTotal() {
 
-        const cantidad = parseInt(cantidadInput.value);
+        if (!cantidadInput || !totalProducto) return;
+
+        const cantidad = Number(cantidadInput.value);
 
         const total = precio * cantidad;
 
         totalProducto.textContent = formatearPrecio(total);
+    }
+
+
+    // =========================================================
+    // SUMAR CANTIDAD
+    // =========================================================
+
+    if (botonSumar && cantidadInput) {
+
+        botonSumar.addEventListener("click", function () {
+
+            let cantidad = Number(cantidadInput.value);
+
+            if (cantidad < 10) {
+
+                cantidad++;
+
+                cantidadInput.value = cantidad;
+
+                actualizarTotal();
+            }
+
+        });
 
     }
 
 
-    /* =========================================================
-       SUMAR
-       ========================================================= */
+    // =========================================================
+    // RESTAR CANTIDAD
+    // =========================================================
 
-    botonSumar.addEventListener("click", function () {
+    if (botonRestar && cantidadInput) {
 
-        let cantidad = parseInt(cantidadInput.value);
+        botonRestar.addEventListener("click", function () {
 
-        if (cantidad < 10) {
+            let cantidad = Number(cantidadInput.value);
 
-            cantidad++;
+            if (cantidad > 1) {
 
-            cantidadInput.value = cantidad;
+                cantidad--;
 
-            actualizarTotal();
+                cantidadInput.value = cantidad;
 
-        }
+                actualizarTotal();
+            }
 
-    });
+        });
 
-
-    /* =========================================================
-       RESTAR
-       ========================================================= */
-
-    botonRestar.addEventListener("click", function () {
-
-        let cantidad = parseInt(cantidadInput.value);
-
-        if (cantidad > 1) {
-
-            cantidad--;
-
-            cantidadInput.value = cantidad;
-
-            actualizarTotal();
-
-        }
-
-    });
+    }
 
 
-    /* =========================================================
-       AÑADIR AL CARRITO
-       ========================================================= */
+    // =========================================================
+    // AÑADIR AL CARRITO
+    // =========================================================
 
-    botonAgregar.addEventListener("click", function () {
+    if (formAgregarCarrito) {
 
-        const cantidad = parseInt(cantidadInput.value);
+        formAgregarCarrito.addEventListener("submit", function (event) {
 
-        mensajeProducto.textContent =
-            "✓ " + cantidad +
-            (cantidad === 1 ? " unidad añadida" : " unidades añadidas") +
-            " al carrito.";
+            event.preventDefault();
 
-        botonAgregar.textContent = "✓ Añadido";
+            const nombreElemento =
+                document.getElementById("producto-nombre");
 
-        setTimeout(function () {
+            const imagenElemento =
+                document.getElementById("imagenPrincipal");
 
-            botonAgregar.textContent = "Añadir al carrito";
+            const nombre = nombreElemento
+                ? nombreElemento.textContent.trim()
+                : "Producto";
 
-        }, 1500);
+            const imagen = imagenElemento
+                ? imagenElemento.src
+                : "";
 
-    });
+            const cantidad = Number(cantidadInput.value);
 
+            // Utilizamos la función agregarProducto()
+            // que ya existe en tu carrito.
+            agregarProducto({
 
-    /* =========================================================
-       MOSTRAR / OCULTAR INFORMACIÓN
-       ========================================================= */
+                id: nombre
+                    .toLowerCase()
+                    .replace(/\s+/g, "-"),
 
-    botonDetalles.addEventListener("click", function () {
+                nombre: nombre,
 
-        const estaOculto = detallesTecnicos.hidden;
+                precio: precio,
 
-        detallesTecnicos.hidden = !estaOculto;
+                imagen: imagen,
 
-        botonDetalles.setAttribute(
-            "aria-expanded",
-            estaOculto
-        );
+                cantidad: cantidad
 
-        if (estaOculto) {
-
-            iconoDetalles.textContent = "−";
-
-        } else {
-
-            iconoDetalles.textContent = "+";
-
-        }
-
-    });
+            });
 
 
-    /* =========================================================
-       INICIALIZAR TOTAL
-       ========================================================= */
+            // Mensaje de confirmación
 
-    precioProducto.textContent = formatearPrecio(precio);
+            if (mensajeProducto) {
+
+                mensajeProducto.textContent =
+                    "✓ " +
+                    cantidad +
+                    (cantidad === 1
+                        ? " unidad añadida"
+                        : " unidades añadidas") +
+                    " al carrito.";
+
+            }
+
+        });
+
+    }
+
+
+    // =========================================================
+    // MOSTRAR / OCULTAR INFORMACIÓN DEL PRODUCTO
+    // =========================================================
+
+    if (botonDetalles && detallesTecnicos) {
+
+        botonDetalles.addEventListener("click", function () {
+
+            const estaOculto = detallesTecnicos.hidden;
+
+            detallesTecnicos.hidden = !estaOculto;
+
+            botonDetalles.setAttribute(
+                "aria-expanded",
+                estaOculto ? "true" : "false"
+            );
+
+            if (iconoDetalles) {
+
+                iconoDetalles.textContent =
+                    estaOculto ? "−" : "+";
+
+            }
+
+        });
+
+    }
+
+
+    // =========================================================
+    // INICIALIZAR TOTAL
+    // =========================================================
 
     actualizarTotal();
 
