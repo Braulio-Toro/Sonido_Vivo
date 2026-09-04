@@ -27,7 +27,6 @@ ul {
   list-style: none;
 }
 
-/* Utilidades */
 .contenedor {
   width: 90%;
   max-width: 1200px;
@@ -148,7 +147,6 @@ ul {
   color: #0a2f1d;
 }
 
-/* Acciones (Login / Carrito) */
 .encabezado__acciones {
   display: flex;
   align-items: center;
@@ -200,8 +198,6 @@ ul {
   box-shadow: 0 4px 12px rgba(19, 117, 71, 0.12);
 }
 
-/* Botones + y - */
-
 .selector-cantidad__boton {
   width: 38px;
   height: 100%;
@@ -228,7 +224,6 @@ ul {
   color: #ffffff;
 }
 
-/* Número de cantidad */
 
 .cantidad-item {
   width: 39px;
@@ -246,17 +241,12 @@ ul {
   appearance: textfield;
 }
 
-/* Quitar flechas del input number */
-
 .cantidad-item::-webkit-inner-spin-button,
 .cantidad-item::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* ==========================================================================
-   3. BOTONES
-   ========================================================================== */
 .boton {
   display: inline-block;
   padding: 0.8rem 1.8rem;
@@ -291,9 +281,6 @@ ul {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   4. HERO SECTION
-   ========================================================================== */
 .hero {
   padding: 4rem 0;
   background: linear-gradient(135deg, #ffffff 0%, #e2ede6 100%);
@@ -402,9 +389,6 @@ ul {
   100% { height: 100%; }
 }
 
-/* ==========================================================================
-   5. SECCIONES GENERALES Y CABECERA
-   ========================================================================== */
 .seccion {
   padding: 4rem 0;
 }
@@ -431,7 +415,6 @@ ul {
   color: #0a2f1d;
 }
 
-/* Video Section */
 .video-tienda__marco video {
   width: 100%;
   border-radius: 10px;
@@ -445,9 +428,6 @@ ul {
   text-align: center;
 }
 
-/* ==========================================================================
-   6. GRILLA DE PRODUCTOS
-   ========================================================================== */
 .grilla-productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -544,9 +524,6 @@ ul {
   background-color: #137547;
 }
 
-/* ==========================================================================
-   7. CATEGORÍAS
-   ========================================================================== */
 .categorias {
   background-color: #0a2f1d;
   color: #ffffff;
@@ -595,9 +572,6 @@ ul {
   font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   8. NOSOTROS, TESTIMONIOS Y CTA
-   ========================================================================== */
 .nosotros__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -624,9 +598,8 @@ ul {
   font-weight: bold;
 }
 
-/* Testimonio */
 .confianza {
-  background-color: #d8e6dd; /* Verde grisáceo más saturado para mejor contraste */
+  background-color: #d8e6dd;
   text-align: center;
   border-radius: 10px;
   padding: 3rem 1.5rem;
@@ -636,7 +609,7 @@ ul {
 .confianza blockquote {
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
-  color: #121f17; /* Texto oscuro visible */
+  color: #121f17; 
   font-style: italic;
   max-width: 800px;
   margin: 0 auto 1rem;
@@ -650,7 +623,6 @@ ul {
   font-weight: 700;
 }
 
-/* CTA Final */
 .cta-final {
   background: linear-gradient(135deg, #137547, #0a2f1d);
   color: #ffffff;
@@ -678,9 +650,6 @@ ul {
   color: #0a2f1d;
 }
 
-/* ==========================================================================
-   9. PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
 .pie {
   background-color: #0a2f1d;
   color: #ffffff;
@@ -769,9 +738,10 @@ ul {
   color: #c8d6ce;
 }
 
-/* ==========================================================================
-   10. RESPONSIVE DESIGN (PANTALLAS PEQUEÑAS)
-   ========================================================================== */
+/* ========================================================
+   Responsive Desing o al menos intento de ello xd
+   ======================================================== */
+
 @media (max-width: 868px) {
   .menu-toggle {
     display: block;
@@ -804,9 +774,6 @@ ul {
   }
 }
 
-/* ==========================================================================
-   11. PÁGINA DE LOGIN Y REGISTRO (DISEÑO Y CENTRADO)
-   ========================================================================== */
 .login-contenedor {
   min-height: 75vh;
   display: flex;
@@ -896,9 +863,8 @@ ul {
   color: #0a2f1d;
 }
 
-/*css registro usuario*/
 .tarjeta-registro {
-  max-width: 480px; /* Un poco más ancho para albergar los campos cómodamente */
+  max-width: 480px;
 }
 
 .formulario-fieldset {
@@ -912,39 +878,27 @@ ul {
   margin-top: 1rem;
 }
 
-/* Selector para el campo de fecha de nacimiento */
 .formulario-grupo input[type="date"] {
   font-family: 'Work Sans', sans-serif;
   color: #121f17;
 }
 
-/* ==========================================================================
-   12. PÁGINA DE PRODUCTOS (CATÁLOGO COMPLETO)
-   ========================================================================== */
-
-/* El h1 de productos.html debe verse igual que el h2 de las demás secciones */
 .seccion__cabecera h1 {
   font-family: 'Fraunces', serif;
   font-size: 2.2rem;
   color: #0a2f1d;
 }
 
-/* Contador de resultados u opciones de orden, si se agregan más adelante */
 .productos__conteo {
   font-size: 0.9rem;
   color: #3a4d43;
 }
 
-/* Responsive: en pantallas pequeñas el h1 se ajusta igual que el h2 */
 @media (max-width: 868px) {
   .seccion__cabecera h1 {
     font-size: 1.8rem;
   }
 }
-
-/* ==========================================================================
-   14. CARRITO DE COMPRAS
-   ========================================================================== */
 
 .carrito-compras__grid {
   display: grid;
@@ -953,7 +907,6 @@ ul {
   align-items: start;
 }
 
-/* Lista de productos */
 .carrito-compras__lista {
   display: flex;
   flex-direction: column;
@@ -1021,7 +974,6 @@ ul {
   white-space: nowrap;
 }
 
-/* Resumen de compra (aside) */
 .carrito-compras__resumen {
   background-color: #ffffff;
   border: 1px solid #c8d6ce;
@@ -1104,7 +1056,6 @@ ul {
   text-decoration: underline;
 }
 
-/* Carrito vacío */
 .carrito-vacio {
   text-align: center;
   padding: 4rem 1rem;
@@ -1143,9 +1094,6 @@ ul {
   }
 }
 
-/* ==========================================================================
-   15. NOSOTROS (EQUIPO)
-   ========================================================================== */
 .grilla-equipo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1188,9 +1136,6 @@ ul {
   letter-spacing: 1px;
 }
 
-/* ==========================================================================
-   16. BLOGS
-   ========================================================================== */
 .grilla-blogs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1255,9 +1200,6 @@ ul {
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   17. DETALLE DE BLOG
-   ========================================================================== */
 .detalle-blog__contenido {
   max-width: 800px;
   margin: 1.5rem auto 0;
@@ -1306,9 +1248,6 @@ ul {
   }
 }
 
-/* ==========================================================================
-   18. TEXTAREA (FORMULARIO DE CONTACTO)
-   ========================================================================== */
 .formulario-textarea {
   padding: 0.75rem 0.9rem;
   border: 1px solid #c8d6ce;
